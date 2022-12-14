@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>ToDo's Page</title>
+</head>
+<body>
+    <header>
+        <h1 class="display-2 text-center">This is the ToDo page</h1>
+    </header>
+    <main>
+        <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos officiis magnam, illum iste sit sunt molestiae id odit illo repudiandae rem placeat at quisquam qui veniam mollitia, minima cum. Saepe, dolore. Repellendus, velit cupiditate?</p>
+        <select name="usersList" id="listOfUsers" class="form-control w-25 mx-auto text-center">
+            <option value="" disabled selected>Select</option>
+        </select>
+        <table class=" table w-75 mx-auto mt-5">
+    
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Deadline</th>
+                    <th>Priority</th>
+                    <th>Completed</th>
+                </tr>
+            </thead>
+            <tbody id="displayTodoTasks"></tbody>
+        </table>  
+        <p id="message" class="text-center display-6 text-info mt-5"></p>
+    </main>    
+    <script src="./scripts/todospage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
