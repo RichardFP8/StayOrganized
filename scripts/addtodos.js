@@ -37,17 +37,12 @@ function addTask() {
     const anyEmptyValues = Boolean(categorySelected) && Boolean(prioritySelected) && Boolean(description) && Boolean(deadline) && Boolean(userSelected);
     const message = document.getElementById("message");
     if (anyEmptyValues) {
-        // let newTask = new FormData();
-        // newTask.append("userid", userSelected);
-        // newTask.append("category", categorySelected);
-        // newTask.append("description", description);
-        // newTask.append("deadline", deadline);
-        // newTask.append("priority", prioritySelected);
+
         let newTask = {
             userid: userSelected,
             category: categorySelected,
             description: description,
-            deadline: deadline,
+            deadline: new Date(deadline),
             priority: prioritySelected
         }
         fetch("http://localhost:8083/api/todos", {
@@ -60,11 +55,11 @@ function addTask() {
         })
             .then(response => response.json())
             .then(results => {
-                message.classList.add("text-success");
+                message.className = "display-6 m-4 text-success";
                 message.innerHTML = "We took a W";
             })
             .catch(error => {
-                message.classList.add("text-danger");
+                message.className = "display-6 m-4 text-danger";
                 message.innerHTML = "Unexpected error";
             });
     } else {
