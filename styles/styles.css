@@ -7,3 +7,9 @@ h2 small{
 table{
     display:none;
 }
+/* header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    
+} */
