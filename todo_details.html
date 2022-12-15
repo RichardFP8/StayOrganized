@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>A ToDo Task</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="display-1 m-3">The task</h1>
+    </header>
+    <main>
+        <form class="w-50 mx-auto">
+            <label for="displayCategory">Category</label>
+            <input id="displayCategory" type="text" class="form-control w-50 mb-3" disabled>
+
+            <label for="displayDescription">Description</label>
+            <input id="displayDescription" type="text" class="form-control w-50 mb-3" disabled>
+
+            <label for="displayDeadline">Deadline</label>
+            <input id="displayDeadline" type="text" class="form-control w-50 mb-3" disabled>
+
+            <label for="displayPriority">Priority</label>
+            <input id="displayPriority" type="text" class="form-control w-50 mb-3" disabled>
+
+            <label for="displayCompleted">Completed</label>
+            <input id="displayCompleted" type="text" class="form-control w-50 mb-3" disabled>
+
+            <button id="completedTask" type="button" class="btn btn-success mt-3">MARK COMPLETED</button>
+        </form>
+        <p id="confirm" class="display-4 mt-5 text-center"></p>
+    </main>
+    <script src="./scripts/oneTodoDetails.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -35,27 +35,19 @@ function displayTasksByUser() {
                 let row = tableBody.insertRow(-1);
                 for (let property in task) {
                     switch (property) {
-                        //as long as its one of these properties, add it to the cell
-                        case "category":
+                        //as long as its one of these properties, add it to the cell 
                         case "description":
                         case "deadline":
-                        case "priority":
-                        case "completed":
-                            let cell = row.insertCell(-1);
-                            //test for the values of the property
-                            switch (task[property]) {
-                                case true:
-                                    cell.innerHTML = "Yes";
-                                    break;
-                                case false:
-                                    cell.innerHTML = "No";
-                                    break;
-                                default:
-                                    cell.innerHTML = task[property];
-                            }
-                            break;
+                        let cell = row.insertCell(-1);
+                        cell.innerHTML = task[property];
+                        break;
                     }
                 }
+                let anchorCell = row.insertCell(-1);
+                let anchor = document.createElement("a");
+                anchor.href = `todo_details.html?toDoid=${task.id}`;
+                anchor.text = "See Details";
+                anchorCell.appendChild(anchor);
             }
             parentTable.style.display = "block";
             message.innerHTML = "";
