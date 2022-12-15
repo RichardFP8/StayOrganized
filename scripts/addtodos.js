@@ -37,20 +37,26 @@ function addTask() {
     const anyEmptyValues = Boolean(categorySelected) && Boolean(prioritySelected) && Boolean(description) && Boolean(deadline) && Boolean(userSelected);
     const message = document.getElementById("message");
     if (anyEmptyValues) {
-        let newTask = new FormData();
-        newTask.append("userid", userSelected);
-        newTask.append("category",
-            categorySelected);
-        newTask.append("description",
-            description);
-        newTask.append("deadline",
-            deadline);
-        newTask.append("priority",
-            prioritySelected);
-        console.log(newTask);
+        // let newTask = new FormData();
+        // newTask.append("userid", userSelected);
+        // newTask.append("category", categorySelected);
+        // newTask.append("description", description);
+        // newTask.append("deadline", deadline);
+        // newTask.append("priority", prioritySelected);
+        let newTask = {
+            userid: userSelected,
+            category: categorySelected,
+            description: description,
+            deadline: deadline,
+            priority: prioritySelected
+        }
         fetch("http://localhost:8083/api/todos", {
             method: "POST",
-            body: newTask
+            body: JSON.stringify(newTask),
+            headers: {
+                "Content-type":
+                    "application/json; charset=UTF-8"
+            }
         })
             .then(response => response.json())
             .then(results => {
