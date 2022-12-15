@@ -52,9 +52,7 @@ function addTask() {
                 "Content-type":
                     "application/json; charset=UTF-8"
             }
-        })
-            .then(response => response.json())
-            .then(results => {
+        }).then(results => {
                 message.className = "display-6 m-4 text-success";
                 message.innerHTML = "We took a W";
             })

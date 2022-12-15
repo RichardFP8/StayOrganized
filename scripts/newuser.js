@@ -22,15 +22,14 @@ window.onload = () => {
                     "Content-type":
                         "application/json; charset=UTF-8"
                 }
-            }).then(response => response.json())
-                .then(results => {
+            }).then(response => {
                     success.innerHTML = "LET's GO!";
                     error.innerHTML = "";
-                })
-                .catch(error => {
-                    success.innerHTML = "";
-                    error.innerHTML = "Unexpected error";
-                })
+            })
+            .catch(error => {
+                success.innerHTML = "";
+                error.innerHTML = "Unexpected error";
+            })
         } else {
             success.innerHTML = "";
             error.innerHTML = "Either you gave me empty values or passwords don't match. Not me, it's YOU"
